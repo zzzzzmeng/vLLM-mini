@@ -2,7 +2,7 @@
 
 这是一个从零实现简化版 vLLM 的练习项目，目标不是复制生产级 vLLM，而是逐步建立大模型推理引擎的核心心智模型。
 
-项目参考 [GeeeekExplorer/nano-vllm](https://github.com/GeeeekExplorer/nano-vllm) 的学习型代码组织，但代码由你自己实现。我们会按阶段推进：先做能跑通的最小推理闭环，再逐步加入 batching、KV cache、paged cache、调度、服务化和性能特性。
+项目参考 [GeeeekExplorer/nano-vllm](https://github.com/GeeeekExplorer/nano-vllm) 的学习型代码组织。我们会按阶段推进：先做能跑通的最小推理闭环，再逐步加入 batching、KV cache、paged cache、调度、服务化等特性。
 
 ## 目标
 
@@ -33,15 +33,6 @@ vLLM-mini/
     vllm_mini/
   tests/
 ```
-
-## 当前工作方式
-
-你写代码，我作为项目经理和技术 reviewer 协助：
-
-1. 我把需求拆成小任务，明确输入、输出和验收标准。
-2. 你完成一个小任务后，把代码或报错发给我。
-3. 我检查设计、提示下一步、帮你定位问题。
-4. 每个阶段通过后，再进入下一阶段。
 
 ## 先读什么
 
