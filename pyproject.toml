@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vllm-mini"
+version = "0.1.0"
+description = "A from-scratch learning project for building a simplified vLLM-style inference engine."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+  { name = "vLLM-mini contributors" }
+]
+dependencies = [
+  "torch>=2.4",
+  "transformers>=4.51",
+  "safetensors>=0.4",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "ruff>=0.6",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
