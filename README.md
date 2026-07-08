@@ -1,5 +1,22 @@
 # vLLM-mini
 
+## S1 Quickstart
+
+Sprint 1 focuses on a minimal single-request inference loop. It runs on CPU by default, so GPU setup is not required for this stage.
+
+```powershell
+cd D:\WorkSpace\Infer\4-practice\vLLM-mini
+.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+.\.venv\Scripts\python.exe -m pytest
+.\.venv\Scripts\python.exe examples\run_single_prompt.py
+```
+
+Expected S1 flow:
+
+```text
+prompt -> tokenizer -> model forward -> logits -> sampler -> append token -> decode
+```
+
 这是一个从零实现简化版 vLLM 的练习项目，目标不是复制生产级 vLLM，而是逐步建立大模型推理引擎的核心心智模型。
 
 项目参考 [GeeeekExplorer/nano-vllm](https://github.com/GeeeekExplorer/nano-vllm) 的学习型代码组织。我们会按阶段推进：先做能跑通的最小推理闭环，再逐步加入 batching、KV cache、paged cache、调度、服务化等特性。
